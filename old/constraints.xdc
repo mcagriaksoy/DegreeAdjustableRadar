@@ -1,0 +1,23 @@
+set_property PACKAGE_PIN Y11 [get_ports echo]
+set_property IOSTANDARD LVCMOS33 [get_ports echo]
+set_property PACKAGE_PIN AA11 [get_ports trig]
+set_property IOSTANDARD LVCMOS33 [get_ports trig]
+
+set_property PACKAGE_PIN T22 [get_ports {led_line[0]}]
+set_property PACKAGE_PIN T21 [get_ports {led_line[1]}]
+set_property PACKAGE_PIN U22 [get_ports {led_line[2]}]
+set_property PACKAGE_PIN U21 [get_ports {led_line[3]}]
+set_property PACKAGE_PIN V22 [get_ports {led_line[4]}]
+set_property PACKAGE_PIN W22 [get_ports {led_line[5]}]
+set_property PACKAGE_PIN U19 [get_ports {led_line[6]}]
+set_property PACKAGE_PIN U14 [get_ports {led_line[7]}]
+
+set_property IOSTANDARD LVCMOS33 [get_ports {led_line[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {led_line[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {led_line[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {led_line[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {led_line[4]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {led_line[5]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {led_line[6]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {led_line[7]}]
+
