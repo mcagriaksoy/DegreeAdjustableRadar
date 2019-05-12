@@ -25,32 +25,32 @@ endif
 
 # Add inputs and outputs from these tool invocations to the build variables 
 ELFSIZE += \
-project.elf.size \
+o.elf.size \
 
 
 # All Target
 all: pre-build main-build
 
 # Main-build Target
-main-build: project.elf secondary-outputs
+main-build: o.elf secondary-outputs
 
 # Tool invocations
-project.elf: $(OBJS) ../src/lscript.ld $(USER_OBJS)
+o.elf: $(OBJS) ../src/lscript.ld $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: ARM v7 gcc linker'
-	arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../project_bsp/ps7_cortexa9_0/lib -o "project.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../o_bsp/ps7_cortexa9_0/lib -o "o.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
-project.elf.size: project.elf
+o.elf.size: o.elf
 	@echo 'Invoking: ARM v7 Print Size'
-	arm-none-eabi-size project.elf  |tee "project.elf.size"
+	arm-none-eabi-size o.elf  |tee "o.elf.size"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(EXECUTABLES)$(OBJS)$(S_UPPER_DEPS)$(C_DEPS)$(ELFSIZE) project.elf
+	-$(RM) $(EXECUTABLES)$(OBJS)$(S_UPPER_DEPS)$(C_DEPS)$(ELFSIZE) o.elf
 	-@echo ' '
 
 pre-build:
