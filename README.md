@@ -1,5 +1,6 @@
 # DegreeAdjustableRadar
-Zynq ZedBoard SoC Lecture Final Project, degree adjustable ultrasonic sensor application
+Zynq ZedBoard SoC Lecture Final Project, degree adjustable ultrasonic sensor application.
+Keywords: zedboard, zynq device, soc, soc project, lecture project, embedded, c, vhdl, fpga, xilinx, vivado, ultrasonic sensor, servo motor, pwm signal, pwm
 
 # Abstract
 In this project, distance measurement is done by ultrasonic distance sensor and servo motor. With the motor position which can be controlled from the software part, the distance in the desired position can be measured.
